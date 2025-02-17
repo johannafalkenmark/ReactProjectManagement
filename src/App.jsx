@@ -1,11 +1,18 @@
 import "./App.css";
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import Projects from "./views/Projects";
 import CreateProject from "./views/CreateProject";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ProjectList from "./components/ProjectList";
+import ListProject from "./views/ListProject";
 
 function App() {
+  useEffect(() => {
+    fetch("https://localhost:7211/api/customer").then((data) => {
+      console.log(data.json());
+    });
+  }, []);
   return (
     <BrowserRouter>
       <div className="wrapper">
@@ -13,10 +20,12 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/projects" element={<Projects />} />
             <Route path="/projects/create" element={<CreateProject />} />
+            <Route path="/projects" element={<ListProject />} />
 
-            <Route path="/" element={<CreateProject />} />
+
+{/* //Listar projekt (tillfällig): */}
+            <Route path="/" element={<ListProject />} />
           </Routes>
         </main>
         <Footer />
