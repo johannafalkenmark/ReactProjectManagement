@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -7,23 +7,21 @@
 :root {
   --standard-fontfamily: "Exo 2", serif;
   --standard-headerfont: "Pacifico", serif;
-  --text-color: #FFFFFF;
-  --text-muted-color: #3C6E71;
-  --text-headline-color: #284B63;
-  --text-link-color: #D9D9D9;
+  --text-color: #ffffff;
+  --text-muted-color: #3c6e71;
+  --text-headline-color: #284b63;
+  --text-link-color: #d9d9d9;
 
-  --border-color: #FFFFFF;
-  --background-color: #D9D9D9;
-  --header-color: #3C6E71;
+  --border-color: #ffffff;
+  --background-color: #ece2d0;
+  --header-color: #3c6e71;
 
-  --btn-1-background: #D9D9D9;
+  --btn-1-background: #d9d9d9;
   --btn-1-border-color: #353535;
   --btn-1-text-color: #353535;
   --btn-1-hover-backgroundcolor: #ffff;
   --btn-1-hover-fontcolor: #ffff;
   --btn-1-hover-bordercolor: #ffff;
-
-  
 }
 
 header {
@@ -39,7 +37,7 @@ header {
 header a {
   text-decoration: none;
   color: var(--text-link-color);
- 
+
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -101,7 +99,7 @@ body {
     background-color: var(--text-color);
     font-size: 1em;
     color: var(--text-headline-color);
-     font-family: var(--standard-headerfont);
+    font-family: var(--standard-headerfont);
   }
 
   nav {
@@ -128,4 +126,82 @@ body {
     text-decoration: none;
     background-color: var(--text-color);
   }
+}
+
+.section-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--text-headline-color);
+}
+.container {
+  background: var(--header-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-headline-color);
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--text-muted-color);
+  box-shadow: 0 0 5px rgba(60, 110, 113, 0.5);
+}
+
+button {
+  background-color: var(--btn-1-background);
+  color: var(--btn-1-text-color);
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid var(--btn-1-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--btn-1-hover-backgroundcolor);
+  color: var(--btn-1-hover-fontcolor);
+  border-color: var(--btn-1-hover-bordercolor);
 }

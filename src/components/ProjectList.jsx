@@ -8,8 +8,10 @@ const ProjectList = () => {
     const res = await fetch("https://localhost:7211/api/projects");
     const data = await res.json();
 
+    console.log(data);
     setProjects(data);
   };
+
   useEffect(() => {
     getProjects();
   }, []);
@@ -19,7 +21,7 @@ const ProjectList = () => {
       <div className="container">
         <div className="projects">
           {projects.map((project) => (
-            <ProjectListItem key={project.id} project={projects} />
+            <ProjectListItem key={project.id} project={project} />
           ))}
         </div>
       </div>
