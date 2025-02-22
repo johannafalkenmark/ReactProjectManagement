@@ -8,7 +8,7 @@ const ProjectListItem = ({ project }) => {
         <strong>Namn:</strong> {project.projectName}
       </div>
       <div>
-        <strong>Projekt manager:</strong> {project.projectManager.firstName}{" "}
+        <strong>Projekt ansvarig:</strong> {project.projectManager.firstName}{" "}
         {project.projectManager.lastName}{" "}
       </div>
       <div>
@@ -18,13 +18,13 @@ const ProjectListItem = ({ project }) => {
         <strong>Användare epost:</strong> {project.user.email}
       </div>
       <div>
-        <strong>Notering:</strong> {project.projectNote.note}{" "}
+        <strong>Notering:</strong> {project.projectNote.notes}
       </div>
       <div>
-        <strong>Service typ:</strong> {project.serviceType.typeName}{" "}
+        <strong>Service typ:</strong> {project.serviceType.typeName}
       </div>
       <div>
-        <strong>Status typ:</strong> {project.statusType.typeName}{" "}
+        <strong>Status typ:</strong> {project.statusType.typeName}
       </div>
       <div>
         <strong>Schema:</strong> {project.projectSchedule.startDate}

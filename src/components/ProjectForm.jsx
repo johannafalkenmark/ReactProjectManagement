@@ -81,7 +81,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* PROJECT MANAGER */}
       <div className="form-row">
-        <p>Projekt manager</p>
+        <p>Projektansvarig</p>
         <select
           type="text"
           value={project.projectManager.id}
@@ -93,6 +93,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, projectManager });
           }}
         >
+          <option value="">-- Välj projektansvarig --</option>
           {projectManagers.map((data) => (
             <option key={data.id} value={data.id}>
               {data.firstName} {data.lastName}
@@ -106,12 +107,13 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
         <select
           type="text"
           value={project.customer.id}
+          defaultValue={project.customer.id}
           onChange={(e) => {
             const customer = customers.find((p) => p.id == e.target.value);
-
             setProject({ ...project, customer });
           }}
         >
+          <option value="">-- Välj kund --</option>
           {customers.map((data) => (
             <option key={data.id} value={data.id}>
               {data.customerName}
@@ -121,7 +123,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* USER */}
       <div className="form-row">
-        <p>Kund</p>
+        <p>Användare</p>
         <select
           type="text"
           value={project.user.id}
@@ -131,6 +133,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, user });
           }}
         >
+          <option value="">-- Välj användare --</option>
           {users.map((data) => (
             <option key={data.id} value={data.id}>
               {data.email}
@@ -152,6 +155,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, projectNote });
           }}
         >
+          <option value="">-- Välj notering --</option>
           {projectNotes.map((data) => (
             <option key={data.id} value={data.id}>
               {data.notes}
@@ -173,6 +177,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, serviceType });
           }}
         >
+          <option value="">-- Välj service typ --</option>
           {serviceTypes.map((data) => (
             <option key={data.id} value={data.id}>
               {data.typeName}
@@ -192,6 +197,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, statusType });
           }}
         >
+          <option value="">-- Välj status typ --</option>
           {statusTypes.map((data) => (
             <option key={data.id} value={data.id}>
               {data.typeName}
@@ -213,6 +219,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, projectSchedule });
           }}
         >
+          <option value="">-- Välj schema --</option>
           {projectSchedules.map((data) => (
             <option key={data.id} value={data.id}>
               {data.startDate} - {data.endDate}

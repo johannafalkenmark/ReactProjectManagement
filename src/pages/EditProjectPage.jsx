@@ -19,17 +19,35 @@ const EditProjectsPage = (props) => {
     getProject(params.id);
   }, [params.id]);
 
-  const saveProject = () => {
+  const saveProject = async () => {
     // SYNKA MED public class ProjectRegistrationForm i BACKEND
     const projectDTO = {
       projectName: project.projectName,
       customerId: project.customer.id,
       projectManagerId: project.projectManager.id,
-      projectNoteId: project.projectNote.id,
+      serviceTypeId: project.serviceType.id,
       statusTypeId: project.statusType.id,
-      serviceTypeId: project.serviceType.id,
-      serviceTypeId: project.serviceType.id,
+      projectNoteId: project.projectNote.id,
+      userId: project.user.id,
+      projectScheduleId: project.projectSchedule.id,
     };
+
+    const res = await fetch(
+      `https://localhost:7211/api/projects/${project.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(projectDTO),
+      }
+    );
+
+    if (res.ok) {
+      alert("Projektet redigerat!");
+    } else {
+      alert("Något gick fel!");
+    }
   };
 
   return (
