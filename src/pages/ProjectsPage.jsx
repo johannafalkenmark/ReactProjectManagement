@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import ProjectListItem from "./ProjectListItem";
+import ProjectListItem from "../components/ProjectListItem";
 
-const ProjectList = () => {
+const ProjectsPage = () => {
   const [projects, setProjects] = useState([]);
 
   const getProjects = async () => {
     const res = await fetch("https://localhost:7211/api/projects");
     const data = await res.json();
 
-    console.log(data);
     setProjects(data);
   };
 
@@ -17,16 +16,15 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <section id="project-list">
-      <div className="container">
-        <div className="projects">
-          {projects.map((project) => (
-            <ProjectListItem key={project.id} project={project} />
-          ))}
-        </div>
+    <section className="container">
+      <h1>Projekt</h1>
+      <div className="projects">
+        {projects.map((project) => (
+          <ProjectListItem key={project.id} project={project} />
+        ))}
       </div>
     </section>
   );
 };
 
-export default ProjectList;
+export default ProjectsPage;
