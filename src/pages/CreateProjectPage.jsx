@@ -5,7 +5,7 @@ import ProjectForm from "../components/ProjectForm";
 
 const CreateProjectPage = (props) => {
   const [project, setProject] = useState({
-    projectName: "Nytt projekt",
+    projectName: "New project",
     customer: { id: 0 },
     projectManager: {},
     serviceType: {},
@@ -16,7 +16,7 @@ const CreateProjectPage = (props) => {
   });
 
   const createProject = async () => {
-    // SYNKA MED public class ProjectRegistrationForm i BACKEND
+    // SYNKAR MED public class ProjectRegistrationForm i BACKEND
     const projectDTO = {
       projectName: project.projectName,
       customerId: project.customer.id,
@@ -37,15 +37,15 @@ const CreateProjectPage = (props) => {
     });
 
     if (res.ok) {
-      alert("Projektet skapat!!");
+      alert("Project is created!!");
     } else {
-      alert("Något gick fel!");
+      alert("Something went wrong!");
     }
   };
 
   return (
     <section className="container">
-      <h1>Skapa projekt</h1>
+      <h1>Create Project</h1>
       <ProjectForm
         project={project}
         setProject={setProject}

@@ -17,7 +17,7 @@ const ProjectsPage = () => {
 
   return (
     <section className="container">
-      <h1>Projekt</h1>
+      <h1>Projects</h1>
       <div className="projects">
         {projects.map((project) => (
           <ProjectListItem key={project.id} project={project} />

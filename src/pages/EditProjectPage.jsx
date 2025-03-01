@@ -44,15 +44,15 @@ const EditProjectsPage = (props) => {
     );
 
     if (res.ok) {
-      alert("Projektet redigerat!");
+      alert("Project edited!");
     } else {
-      alert("Något gick fel!");
+      alert("Something went wrong!");
     }
   };
 
   return (
     <section className="container">
-      <h1>Redigera projekt</h1>
+      <h1>Edit Project</h1>
       <ProjectForm
         project={project}
         setProject={setProject}

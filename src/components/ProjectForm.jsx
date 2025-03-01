@@ -63,14 +63,14 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
 
   if (!project.projectName) {
     // HÄR HANTERAR VI OM PROJEKTET INTE FINNS!!
-    return <p>Inget projekt</p>;
+    return <p>No project exists</p>;
   }
 
   return (
     <div className="form">
       {/* NAMN */}
       <div className="form-row">
-        <p>Projekt namn</p>
+        <p>Project name</p>
         <input
           type="text"
           value={project.projectName}
@@ -81,7 +81,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* PROJECT MANAGER */}
       <div className="form-row">
-        <p>Projektansvarig</p>
+        <p>Project manager</p>
         <select
           type="text"
           value={project.projectManager.id}
@@ -93,7 +93,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, projectManager });
           }}
         >
-          <option value="">-- Välj projektansvarig --</option>
+          <option value="">-- Choose Project manager --</option>
           {projectManagers.map((data) => (
             <option key={data.id} value={data.id}>
               {data.firstName} {data.lastName}
@@ -103,7 +103,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* CUSTOMER */}
       <div className="form-row">
-        <p>Kund</p>
+        <p>Customer</p>
         <select
           type="text"
           value={project.customer.id}
@@ -113,7 +113,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, customer });
           }}
         >
-          <option value="">-- Välj kund --</option>
+          <option value="">-- Choose Customer --</option>
           {customers.map((data) => (
             <option key={data.id} value={data.id}>
               {data.customerName}
@@ -123,7 +123,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* USER */}
       <div className="form-row">
-        <p>Användare</p>
+        <p>User</p>
         <select
           type="text"
           value={project.user.id}
@@ -133,7 +133,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, user });
           }}
         >
-          <option value="">-- Välj användare --</option>
+          <option value="">-- Choose User --</option>
           {users.map((data) => (
             <option key={data.id} value={data.id}>
               {data.email}
@@ -143,7 +143,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* PROJECT NOTE */}
       <div className="form-row">
-        <p>Notering</p>
+        <p>Project Note</p>
         <select
           type="text"
           value={project.projectNote.id}
@@ -155,7 +155,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, projectNote });
           }}
         >
-          <option value="">-- Välj notering --</option>
+          <option value="">-- Choose Project Note --</option>
           {projectNotes.map((data) => (
             <option key={data.id} value={data.id}>
               {data.notes}
@@ -165,7 +165,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* SERVICE */}
       <div className="form-row">
-        <p>Service typ</p>
+        <p>Service type</p>
         <select
           type="text"
           value={project.serviceType.id}
@@ -177,7 +177,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, serviceType });
           }}
         >
-          <option value="">-- Välj service typ --</option>
+          <option value="">-- Choose Service Type --</option>
           {serviceTypes.map((data) => (
             <option key={data.id} value={data.id}>
               {data.typeName}
@@ -187,7 +187,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* STATUS */}
       <div className="form-row">
-        <p>Status typ</p>
+        <p>Status type</p>
         <select
           type="text"
           value={project.statusType.id}
@@ -197,7 +197,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, statusType });
           }}
         >
-          <option value="">-- Välj status typ --</option>
+          <option value="">-- Choose Status Type --</option>
           {statusTypes.map((data) => (
             <option key={data.id} value={data.id}>
               {data.typeName}
@@ -207,7 +207,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
       </div>
       {/* SCHEDULE */}
       <div className="form-row">
-        <p>Schema</p>
+        <p>Schedule</p>
         <select
           type="text"
           value={project.projectSchedule.id}
@@ -219,7 +219,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
             setProject({ ...project, projectSchedule });
           }}
         >
-          <option value="">-- Välj schema --</option>
+          <option value="">-- Choose Schedule --</option>
           {projectSchedules.map((data) => (
             <option key={data.id} value={data.id}>
               {data.startDate} - {data.endDate}
@@ -227,7 +227,7 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
           ))}
         </select>
       </div>
-      <button onClick={saveProject}>Spara värden</button>
+      <button onClick={saveProject}>Save</button>
     </div>
   );
 };

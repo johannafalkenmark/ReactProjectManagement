@@ -29,16 +29,19 @@ header {
   font-family: var(--standard-headerfont);
   justify-content: space-between;
   align-items: center;
+  font-size: 24px;
   background-color: var(--header-color);
-  padding: 1rem 2rem;
+  padding: 1rem 10rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-link-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header a {
   text-decoration: none;
   color: var(--text-link-color);
 
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -50,9 +53,13 @@ header a:hover {
 }
 
 header a.active {
-  color: var(--text-headline-color);
+  color: var(--text-link-color);
   border-bottom: 2px solid var(--text-color);
+  border-color: var(--text-link-color);
+border-bottom-width: 4px;
 }
+
+
 html,
 body {
   margin: 0;
@@ -189,8 +196,7 @@ button:hover {
   border-color: var(--btn-1-hover-bordercolor);
 }
 
-.projects {
-}
+
 
 .project-list-item {
   padding: 8px 0;
