@@ -4,15 +4,13 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      {/* <Btn className="btn"> */}
+      <h2 className="header-text">
         <NavLink to="/projects">Projects</NavLink>
-      {/* </Btn> */}
+      </h2>
       <h1>Project Manager</h1>
-
-      {/* <Btn className="btn"> */}
-        
-        <NavLink to="/projects/create">Create</NavLink>
-      {/* </Btn> */}
+      <h2 className="header-text">
+        <NavLink to="/create-project">Create</NavLink>
+      </h2>
     </header>
   );
 };
