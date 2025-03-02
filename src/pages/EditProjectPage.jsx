@@ -52,7 +52,7 @@ const EditProjectsPage = (props) => {
 
   return (
     <section className="container">
-      <h1>Edit Project</h1>
+      <h1 className="headline">Edit Project</h1>
       <ProjectForm
         project={project}
         setProject={setProject}

@@ -31,7 +31,10 @@ const ProjectListItem = ({ project }) => {
         {" - "}
         {project.projectSchedule.endDate}
       </div>
-      <NavLink to={`/edit-project/${project.id}`}>Edit Project</NavLink>
+      <button>
+       
+        <NavLink to={`/edit-project/${project.id}`}>Edit Project</NavLink>
+      </button>
     </div>
   );
 };

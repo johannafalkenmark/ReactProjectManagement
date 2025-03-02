@@ -59,7 +59,10 @@ header a.active {
 border-bottom-width: 4px;
 }
 
-
+.headline {
+  color: var(--text-headline-color);
+  font-size: 2rem;
+}
 html,
 body {
   margin: 0;
@@ -179,8 +182,9 @@ select:focus {
 }
 
 button {
-  background-color: var(--btn-1-background);
-  color: var(--btn-1-text-color);
+  background-color: var(--text-link-color);
+  color: var(--text-headline-color);
+  text-decoration: none;
   padding: 10px 15px;
   font-size: 1rem;
   font-weight: 600;
@@ -212,4 +216,9 @@ button:hover {
 input,
 select {
   width: 100%;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 12px;
 }
