@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+//Denna komponent hämtar hem all data för mina projekt 
 const ProjectForm = ({ project, setProject, saveProject }) => {
   const [customers, setCustomers] = useState([]);
   const [projectManagers, setProjectManagers] = useState([]);
@@ -62,8 +63,8 @@ const ProjectForm = ({ project, setProject, saveProject }) => {
   }, []);
 
   if (!project.projectName) {
-    // HÄR HANTERAR VI OM PROJEKTET INTE FINNS!!
-    return <p>No project exists</p>;
+    // HÄR HANTERAR VI OM PROJEKTET INTE FINNS!
+    return <p>Loading/No project exists</p>;
   }
 
   return (
