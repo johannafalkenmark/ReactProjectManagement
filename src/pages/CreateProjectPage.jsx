@@ -6,7 +6,7 @@ import ProjectForm from "../components/ProjectForm";
 const CreateProjectPage = (props) => {
   const [project, setProject] = useState({
     projectName: "New project",
-    customer: { id: 0 },
+    customer: {},
     projectManager: {},
     serviceType: {},
     statusType: {},
@@ -37,7 +37,7 @@ const CreateProjectPage = (props) => {
     });
 
     if (res.ok) {
-      alert("Project is created!!");
+      alert("Project is created!");
     } else {
       alert("Something went wrong!");
     }
@@ -45,7 +45,7 @@ const CreateProjectPage = (props) => {
 
   return (
     <section className="container">
-      <h1>Create Project</h1>
+      <h1 className="headline">Create Project</h1>
       <ProjectForm
         project={project}
         setProject={setProject}
